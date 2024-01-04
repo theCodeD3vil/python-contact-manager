@@ -14,3 +14,14 @@ def get_contact(contacts, name):
             return contact
     return None
 
+def get_contact_index(contacts, name):
+  for contact in contacts:
+      if contact["name"] == name:
+          return contacts.index(contact)
+  return None
+
+
+def delete_contact(contacts, index):
+  new_contacts = contacts
+  new_contacts.pop(index)
+  return new_contacts
